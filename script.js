@@ -1,4 +1,4 @@
-var timeBlock = $(".time-block");
+// var timeBlock = $(".time-block");
 
 // for timeBlock(var i = 0; i < timeBlock; i++ ) {
 //     [
@@ -8,3 +8,5 @@ var timeBlock = $(".time-block");
 //     
 // }
 
+// var now = DateTime.local();
+alert("hello, World")
