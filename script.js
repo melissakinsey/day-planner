@@ -1,5 +1,10 @@
 var timeBlock = $(".time-block");
 
-for timeBlock(let x = x; x < x; x++ ) {
-    
-}
+// for timeBlock(var i = 0; i < timeBlock; i++ ) {
+//     [
+//     
+//         
+// ]
+//     
+// }
+
