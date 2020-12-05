@@ -7,6 +7,14 @@
 // ]
 //     
 // }
+// var dt = DateTime.local(day.month.day);
+// $("#currentDay").text(DateTime.fromObject({ year: 1982, month: 5, day: 25}).toISODate());
 
-// var now = DateTime.local();
-alert("hello, World")
+$("#currentDay").text(luxon.DateTime.local().toLocaleString({ weekday: 'long', month: 'long', day: '2-digit' }));
+
+
+
+
+
+
+
