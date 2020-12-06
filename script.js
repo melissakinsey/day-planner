@@ -1,26 +1,36 @@
+
+$("#currentDay").text(luxon.DateTime.local().toLocaleString({
+  weekday: 'long',
+  month: 'long',
+  day: '2-digit',
+}));
+
+
+// var hour = $(".hour");
 // var timeBlock = $(".time-block");
+// var saveBtn = $(".saveBtn");
+// var agenda = [];
 
-// for timeBlock(var i = 0; i < timeBlock; i++ ) {
-//     [
-//     
-//         
-// ]
-//     
-// }
-// var dt = DateTime.local(day.month.day);
-// $("#currentDay").text(DateTime.fromObject({ year: 1982, month: 5, day: 25}).toISODate());
+function timeBlockEl() {
+  let hourEl = luxon.DateTime.local().toLocaleString({ hour: "2-digit", minute: '2-digit', hour12: false });
+  let formattedHour = parseInt(hourEl[0] + hourEl[1]);
 
-$("#currentDay").text(luxon.DateTime.local().toLocaleString({ weekday: 'long', month: 'long', day: '2-digit' }));
+  console.log(hourEl);
 
-// // Store
-// localStorage.setItem("lastname", "Smith");
-// // Retrieve
-// document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+$(".time-block").each(function () {
+  let currentHour = parseInt($(this).attr("id"));
+  console.log(this);
+  if (formattedHour > currentHour) {
+    $(this).addClass("past");
+  } else if (currentHour === formattedHour) {
+    $(this).addClass("present");
+  } else {
+    $(this).addClass("future");
+  }
+ });
+}
 
-var hour = $(".hour");
-var timeBlock = $(".time-block");
-var saveBtn = $(".saveBtn");
-var agenda = [];
+timeBlockEl();
 
 // // init();
 // function init() {
@@ -60,9 +70,7 @@ var agenda = [];
 
 
 
-let currentTime = luxon.DateTime.local().toLocaleString({ hour: "2-digit", minute: '2-digit', hour12: false});
 
-console.log(currentTime);
 
 
 
