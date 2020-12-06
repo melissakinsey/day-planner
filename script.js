@@ -43,31 +43,3 @@ saveBtn.on("click", function () {
 
 timeBlockEl();
 storeEl();
-
-// init();
-// function init() {
-//   //  Get stored agenda from localStorage
-//   //  Parsing the JSON string to an object
-//   var storedAgenda = JSON.parse(localStorage.getItem("agenda"));
-//   // If agenda was retrieved from localStorage, update the agenda array
-//   if (storedAgenda !== null) {
-//     agenda = storedAgenda;
-//   }
-//   // Render agenda to the DOM
-//   renderAgenda();
-// }
-//
-// //  Render a new li for each todo
-// for (var i = 0; i < agenda.length; i++) {
-//   var agenda = storedAgenda[i];
-//
-//   var li = document.createElement("li");
-//   li.textContent = todo;
-//   li.setAttribute("data-index", i);
-//
-//   var button = document.createElement("button");
-//
-//   button.textContent = "Complete";
-//   li.appendChild(button);
-//   storedAgenda.appendChild(li);
-// }
