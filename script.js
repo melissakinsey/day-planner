@@ -30,6 +30,12 @@ $(".time-block").each(function () {
  });
 }
 
+$(".saveBtn").on("click", function(){
+  let userText = $("saveBtn").siblings(".hour").val();
+  let time = $("saveBtn").siblings(".usrTxt").val();
+  localStorage.setItem(time, userText);
+});
+
 timeBlockEl();
 
 // // init();
