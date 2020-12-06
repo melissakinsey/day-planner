@@ -12,6 +12,15 @@
 
 $("#currentDay").text(luxon.DateTime.local().toLocaleString({ weekday: 'long', month: 'long', day: '2-digit' }));
 
+// Store
+localStorage.setItem("lastname", "Smith");
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+
+var hour = $(".hour");
+var timeBlock = $(".time-block");
+var saveBtn = $(".saveBtn");
+
 
 
 
