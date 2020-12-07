@@ -11,7 +11,7 @@ $("#currentDay").text(
 var agenda = [];
 
 function timeBlockEl() {
-  let hourEl = luxon.DateTime.local().toLocaleString({
+  var hourEl = luxon.DateTime.local().toLocaleString({
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
@@ -34,12 +34,19 @@ function timeBlockEl() {
   });
 }
 var saveBtn = $(".saveBtn");
-
 saveBtn.on("click", function () {
   let agenda = $(this).siblings(".hour").text();
   let usrTxt = $(this).siblings("#input").val();
   localStorage.setItem(agenda, usrTxt);
 });
-
+function storeEl() {
+  $(".hour").each(function () {
+    let currentHour = $(this).text();
+    let storedTxt = localStorage.getItem(currentHour);
+    if (storedTxt !== null) {
+      $(this).siblings("textarea").val(storedTxt);
+    }
+  });
+}
 timeBlockEl();
 storeEl();
